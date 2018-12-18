@@ -1,0 +1,10 @@
+nz-switch {
+  margin-bottom: 8px;
+}
+#rightBox{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc( 100% - 240px );
+
+}

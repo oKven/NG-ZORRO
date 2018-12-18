@@ -1,0 +1,33 @@
+import { AfterViewInit, ChangeDetectorRef, EventEmitter, NgZone, OnDestroy, OnInit, TemplateRef } from '@angular/core';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { Platform } from '@angular/cdk/platform';
+import { NzLayoutComponent } from './nz-layout.component';
+export declare type NzBreakPoint = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
+export declare class NzSiderComponent implements OnInit, AfterViewInit, OnDestroy {
+    private nzLayoutComponent;
+    private mediaMatcher;
+    private ngZone;
+    private platform;
+    private cdr;
+    private below;
+    private destroy$;
+    private dimensionMap;
+    nzWidth: number;
+    nzCollapsedWidth: number;
+    nzBreakpoint: NzBreakPoint;
+    nzReverseArrow: boolean;
+    nzCollapsible: boolean;
+    nzTrigger: TemplateRef<void>;
+    nzCollapsed: boolean;
+    readonly nzCollapsedChange: EventEmitter<{}>;
+    readonly flexSetting: string;
+    readonly widthSetting: number;
+    watchMatchMedia(): void;
+    toggleCollapse(): void;
+    readonly isZeroTrigger: boolean;
+    readonly isSiderTrigger: boolean;
+    constructor(nzLayoutComponent: NzLayoutComponent, mediaMatcher: MediaMatcher, ngZone: NgZone, platform: Platform, cdr: ChangeDetectorRef);
+    ngOnInit(): void;
+    ngAfterViewInit(): void;
+    ngOnDestroy(): void;
+}

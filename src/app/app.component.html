@@ -1,0 +1,154 @@
+
+
+<!-- Switch -->
+<!-- https://ng.ant.design/docs/introduce/zh -->
+
+
+<div style="width: 240px;">
+  <button nz-button [nzType]="'primary'" (click)="toggleCollapsed()" style="width: 80px;border-radius:0px;">
+    <i nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'"></i>
+  </button>
+  <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed" (nzClick)="toUrl($event)">
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '页面布局(/layout)' : ''" data-name="/layout" >
+          <span title>
+            <i nz-icon type="table"></i>
+            <span>页面布局(/layout)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '登录组件(/login)' : ''" data-name="/login" >
+          <span title>
+            <i nz-icon type="appstore"></i>
+            <span>登录组件(/login)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '图标(/icon)' : ''" data-name="/icon" >
+          <span title>
+            <i nz-icon type="star"></i>
+            <span>图标(/icon)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '按钮(/button)' : ''" data-name="/button" >
+          <span title>
+            <i nz-icon type="select"></i>
+            <span>按钮(/button)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '菜单(/nav)' : ''" data-name="/nav" >
+          <span title>
+            <i nz-icon type="menu-fold"></i>
+            <span>菜单(/nav)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '分页器(/page)' : ''" data-name="/page" >
+          <span title>
+            <i nz-icon type="read"></i>
+            <span>分页器(/page)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '时间控件(/time)' : ''" data-name="/time" >
+          <span title>
+            <i nz-icon type="dashboard"></i>
+            <span>时间控件(/time)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '上传控件(/upload)' : ''" data-name="/upload" >
+          <span title>
+            <i nz-icon type="upload"></i>
+            <span>上传控件(/upload)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '跑马灯(/swiper)' : ''" data-name="/swiper" >
+          <span title>
+            <i nz-icon type="database"></i>
+            <span>跑马灯(/swiper)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '列表切换控件(/tab)' : ''" data-name="/tab" >
+          <span title>
+            <i nz-icon type="radius-setting"></i>
+            <span>列表切换控件(/tab)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '层级控件(/tree)' : ''" data-name="/tree" >
+          <span title>
+            <i nz-icon type="colum-height"></i>
+            <span>层级控件(/tree)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '抽屉式侧边(/drawer)' : ''" data-name="/drawer" >
+          <span title>
+            <i nz-icon type="desktop" ></i>
+            <span>抽屉式侧边(/drawer)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '弹窗组件(/showmodal)' : ''" data-name="/showmodal" >
+          <span title>
+            <i nz-icon type="bulb"></i>
+            <span>弹窗组件(/showmodal)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '进度条组件(/progress)' : ''" data-name="/progress" >
+          <span title>
+            <i nz-icon type="sync"></i>
+            <span>进度条组件(/progress)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '加载中自定义(/loading)' : ''" data-name="/loading" >
+          <span title>
+            <i nz-icon type="loading"></i>
+            <span>加载中自定义(/loading)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '返回顶部控件(/backtop)' : ''" data-name="/backtop" >
+          <span title>
+            <i nz-icon type="arrow-up"></i>
+            <span>返回顶部控件(/backtop)</span>
+          </span>
+    </li>
+    <li nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? '开关(/switch)' : ''" data-name="/switch" >
+          <span title>
+            <i nz-icon type="swap"></i>
+            <span>开关(/switch)</span>
+          </span>
+    </li>
+    <li nz-submenu>
+          <span title>
+            <i nz-icon type="mail"></i>
+            <span>待添加组件</span>
+          </span>
+      <ul>
+        <li nz-menu-item>功能</li>
+        <li nz-menu-item>功能</li>
+        <li nz-submenu>
+          <span title>待添加组件</span>
+          <ul>
+            <li nz-menu-item>功能</li>
+            <li nz-menu-item>功能</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu>
+          <span title>
+            <i nz-icon type="setting"></i>
+            <span>待添加组件</span>
+          </span>
+      <ul>
+        <li nz-menu-item>功能</li>
+        <li nz-menu-item>功能</li>
+        <li nz-menu-item>功能</li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+
+<div id="rightBox">
+  <div style="padding: 40px;">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>
+

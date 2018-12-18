@@ -1,0 +1,31 @@
+import { ChangeDetectorRef, ElementRef, OnChanges, OnDestroy, OnInit, TemplateRef } from '@angular/core';
+import { NzUpdateHostClassService } from '../core/services/update-host-class.service';
+import { NzSizeLDSType } from '../core/types/size';
+import { NzI18nService } from '../i18n/nz-i18n.service';
+import { NzListGrid } from './interface';
+export declare class NzListComponent implements OnInit, OnChanges, OnDestroy {
+    private el;
+    private cd;
+    private updateHostClassService;
+    private i18n;
+    locale: any;
+    private i18n$;
+    nzDataSource: any[];
+    nzBordered: boolean;
+    nzGrid: NzListGrid;
+    nzHeader: string | TemplateRef<void>;
+    nzFooter: string | TemplateRef<void>;
+    nzItemLayout: 'vertical' | 'horizontal';
+    nzRenderItem: TemplateRef<void>;
+    nzLoading: boolean;
+    nzLoadMore: TemplateRef<void>;
+    nzPagination: TemplateRef<void>;
+    nzSize: NzSizeLDSType;
+    nzSplit: boolean;
+    private prefixCls;
+    private _setClassMap;
+    constructor(el: ElementRef, cd: ChangeDetectorRef, updateHostClassService: NzUpdateHostClassService, i18n: NzI18nService);
+    ngOnInit(): void;
+    ngOnChanges(): void;
+    ngOnDestroy(): void;
+}
